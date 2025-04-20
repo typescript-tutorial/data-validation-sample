@@ -1,0 +1,20 @@
+{
+  "name": "data-validation-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app",
+  "scripts": {
+    "start": "ts-node-dev src/app",
+    "js": "npm run tsc && node es6/app.js",
+    "tsc": "./node_modules/typescript/bin/tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "xvalidators": "^0.5.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
