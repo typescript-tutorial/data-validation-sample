@@ -50,6 +50,9 @@ const enResource: StringMap = {
   zip_code: "Zip code is not valid.",
   quality: "Quality",
   level: "Level",
+  credit_limit: "Credit Limit",
+  skills: "Skills",
+  achievements: "Achievements",
 }
 
 const viResource = {
@@ -98,6 +101,9 @@ const viResource = {
   zip_code: "Mã bưu điện không hợp lệ.",
   quality: "Chất lượng",
   level: "Cấp độ",
+  credit_limit: "Hạn mức tín dụng",
+  skills: "Kỹ năng",
+  achievements: "Thành tựu",
 }
 
 const resources: Resources = {
@@ -108,7 +114,7 @@ const resources: Resources = {
 function getResource(lang: string): StringMap {
   return resources[lang] || resources["en"]
 }
-const resource = getResource("en")
+const resource = getResource("en") // or "vi" for Vietnamese
 
 interface Skill {
   skill: string
@@ -169,6 +175,8 @@ const achievementSchema: Attributes = {
   skills: {
     type: "array",
     typeof: skillSchema,
+    required: true,
+    resource: "skills",
   },
 }
 
@@ -224,6 +232,7 @@ const userSchema: Attributes = {
     precision: 10,
     scale: 2,
     min: 1,
+    resource: "credit_limit",
   },
   status: {
     type: "strings",
@@ -237,6 +246,9 @@ const userSchema: Attributes = {
   achievements: {
     type: "array",
     typeof: achievementSchema,
+    min: 4,
+    required: true,
+    resource: "achievements",
   },
 }
 
