@@ -138,7 +138,8 @@ const userSchema: Attributes = {
   },
   dateOfBirth: {
     type: "datetime",
-    min: "1962-03-25",
+    min: "1964-03-25",
+    resource: "date_of_birth",
   },
   creditLimit: {
     type: "number",
