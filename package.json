@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "xvalidators": "^0.5.8"
+    "xvalidators": "^0.5.14"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0",

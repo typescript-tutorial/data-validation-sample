@@ -29,6 +29,18 @@ const enResource: StringMap = {
   error_date: "{0} is not a valid date.",
   error_enum: "{0} must be one of {1}.",
 
+  error_min_date: "{0} cannot be before {1}.",
+  error_max_date: "{0} cannot be after {1}.",
+  error_from_now: "{0} must be after now.",
+  error_from_today: "{0} must be from today.",
+  error_from_tomorrow: "{0} must be from tomorrow.",
+  error_from_yesterday: "{0} must be from yesterday.",
+  error_from: "{0} must be after {1}.",
+  error_after_now: "{0} cannot be after now.",
+  error_after_today: "{0} cannot be after today.",
+  error_after_tomorrow: "{0} cannot be after tomorrow.",
+  error_after_yesterday: "{0} must be after yesterday.",
+
   username: "Username",
   date_of_birth: "Date Of Birth",
   telephone: "Telephone",
@@ -126,6 +138,7 @@ const userSchema: Attributes = {
   },
   dateOfBirth: {
     type: "datetime",
+    min: "1962-03-25",
   },
   creditLimit: {
     type: "number",
